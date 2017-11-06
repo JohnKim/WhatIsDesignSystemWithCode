@@ -1,0 +1,10 @@
+{
+  "plugins": ["autocover"],
+  "pluginsConfig": {
+    "autocover": {
+      "background": {
+        "color": "#FFFFFF"
+      }
+    }
+  }
+}
