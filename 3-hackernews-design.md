@@ -1,4 +1,4 @@
-# Hacker News 어플리케이션 개발 사례
+# 3. Hacker News 어플리케이션 개발 사례
 
 실제 react-sketchapp 사용의 이해를 돕기 위하여 Hacker News 모바일 어플리케이션 개발을 위한 디자인 프로젝트를 개발해 보았습니다.
 
@@ -8,7 +8,7 @@ Hacker News 모바일 어플리케이션은 Hacker News API 서버(https://githu
  * Hacker News Mobile Application : https://github.com/NewsPlatform/HackerNews-design
 
 
-### Hacker News Design
+### 3.1. Hacker News Design
 
 이 프로젝트 (https://github.com/NewsPlatform/HackerNews-design) 는 `react-sketchapp` 으로 디자인 가이드와 화면을 디자인 한 프로젝트 입니다. 
 
@@ -21,6 +21,8 @@ Hacker News 모바일 어플리케이션은 Hacker News API 서버(https://githu
  * Local 이미지 로딩 - react-sketchapp 의 Image 컴포넌트는 Local 디렉토리의 이미지를 로딩할 수 없고 uri로 이미지를 로딩해야만 합나다. Local 이미지를 사용하기 위해서는 localhost 로 접속할 수 있도록 웹서버를 실행해서 해결하기도 합니다.
 
 이제 다운로드 받아 실행해보도록 하겠습니다. 
+
+### 실행하기
 
 실행하기에 앞서 Sketch 어플리케이션을 실행한 후 New Document 를 열어두어야 합니다. 
 ```
@@ -42,8 +44,51 @@ $ npm start
 ```
 여러 명령어를 동시에 실행할 수 있는 `concurrently` 모듈로 로컬 웹서버와 skpm 으로 빌드 및 랜더링을 동시에 실행하도록 한 것을 확인 할 수 있습니다.
 
+### 폴더 구조
 
-### Hacker News Mobile 어플리케이션
+`react-sketchapp` 을 기반으로 화면을 고딩한 파일은 모두 `./src` 폴더에 개발되어 있습니다.
+
+```
+./src
+├── components
+│   ├── CommentRow.js
+│   ├── HTMLView.js
+│   ├── Header.js
+│   ├── Icons.js
+│   └── StoryRow.js
+├── main.js
+├── manifest.json
+├── screens
+│   ├── CommentScreen.js
+│   ├── PageScreen.js
+│   └── StoryScreen.js
+├── styles
+│   └── index.js
+└── utils
+    ├── constants.js
+    └── fetchData.js
+```
+
+* `./src/components' 
+
+   다양한 화면에서 재사용 가능한 UI 영역을 이 폴더에 분리 개발하였습니다. 또는, 하나의 화면에서 반복적으로 사용해야 하는 부분도 UI Component 로 개발 됩니다.
+
+* `./src/screens'
+
+   Hacker News 앱을 구성하는 화면은 Story, Comment, Page 총 3가지이며 이 폴더에 저장했습니다. 
+
+* `./src/styles'
+
+   사용하게 되는 기본 폰트, 색상 팔랫트와 화면과 UI Component 별로 스타일 정보를 여기에 정의했습니다. 이 폴더에 정의된 스타일 정보를 변경하면 모든 화면의 디자인이 동시에 변경될 것입니다. 향후 개발시에도 이 스타일 정보 파일은 수정 없이 그대로 사용되게 됩니다.
+
+* `./src/utils'
+
+   그 외 다양한 유틸용 함수들을 개발되어 있는 펄더입니다.
+
+이러한 폴더 구조는 실제 모바일앱 어플리케이션 프로젝트와 동일합니다. 
+
+
+### 3.2. Hacker News Mobile 어플리케이션
 
 이 프로젝트(https://github.com/NewsPlatform/HackerNews-mobile) 는  React Native(https://facebook.github.io/react-native/) 를 기반으로한 모바일 어플리케이션입니다. 물론 앞서 설명한 디자인의 스타일 요소는 그대로 사용하여 동작하도록 되어 있습니다. 
 
@@ -56,12 +101,10 @@ $ npm install
 $ npm start
 ```
 
-화면의 스타일을 정의한 파일은 `styles/style.js` 입니다. 여기에 정의된 스타일은 react-sketchapp 기반의 Design System 에서 작성된 파일과 동일합니다. 
-
-그리고 `screens` 폴더 안의 화면과, `components` 폴더 안의 재사용 가능한 공통 컴포넌트들 역시 Design System 의 파일과 서로 매칭되도록 개발되었습니다. 만약 디자인이 변경된다면, Design System 의 파일과 본 어플리케이션 프로젝트의 파일이 함께 변경되어 관리되어야 할 것입니다.
+화면의 스타일을 정의한 파일은 `styles/index.js` 입니다. 여기에 정의된 스타일은 react-sketchapp 기반의 Design System 에서 작성된 파일과 동일합니다. 
 
 
-# 마지막으로
+# 3.3. 마지막으로
 
 Design System 를 구성할 수 있는 수 많은 방법 중 하나로`react-sketchapp` 을 소개한 것이므로 당연히 더 좋은 방법이 있을 수 있고, 지금도 수많은 시도가 진행되고 있습니다. 
 
