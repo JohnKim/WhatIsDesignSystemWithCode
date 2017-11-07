@@ -1,4 +1,4 @@
-# 2. React-sketchapp 기본 사용법
+# 2.2. React-sketchapp 기본 사용법
 
 Sketch (https://www.sketchapp.com) 는 Vector 기반의 그래픽 툴로서, 최근 Photoshop 이상으로 많이 사용되고 있습니다. 쉽고 직관적으로 벡터 드로잉을 할 수 있고, 제플린 (https://zeplin.io) 과 같은 서비스와 연동하여 디자인 가이드를 자동으로 만들기도 하는 등 다양한 기능을 사용할 수 있습니다. 특히 모바일 UI 디자인에 많이 사용되고 있으며, Sketch 용으로 다양한 모바일 디자인 UI Kit을 구할 수도 있습니다.
 
@@ -7,7 +7,7 @@ Sketch의 Symbol 기능은 UI 공통 컴포넌트의 개념으로서 재사용 �
 Mac의 OSX 에서만 사용이 가능한 단점이 있지만, 기존의 무겁고 고가의 디자인 툴과 비교하여 상대적으로 가볍고 직관적이기 때문에 웹과 모바일 영역에서 최근 가장 많이 사용되고 있는 디자인 툴 중 하나입니다.
 
 
-### 2.1. react-sketchapp 란?
+### 2.2.1. react-sketchapp 란?
 
 `react-sketchapp` (https://github.com/airbnb/react-sketchapp) 은 리엑트 컴포넌트를 Sketch 에 랜더링 할 수 있도록 하는 기능을 제공합니다.
 지금까지 일반적인 디자인 작업으로, Sketch 로 디자인한 뒤에 개발 코드로 옮겨 왔지만, `react-sketchapp` 은 정반대로 React 기반의 코드를 작성하여 Sketch 에 디자인하는 것입니다.
@@ -19,7 +19,7 @@ Mac의 OSX 에서만 사용이 가능한 단점이 있지만, 기존의 무겁�
 > 그러므로, UI 변경이 확정이 되면 그때 React 로 수정사항을 코딩해서 반영해야 할 것입니다.
 
 
-### 2.2. react-sketchapp 실행
+### 2.2.2. react-sketchapp 실행
 
 `react-sketchapp` 을 다운로드 받은 후 간단한 예제 코드를 확인하고, 실제로 실행해 보도록 합니다. 예제코드는 `react-sketchapp` 프로젝트의 `./examples` 폴더에 여러가지가 준비 되어 있습니다. 이 중에 가장 기본적인 색상팔랫트를 작성하는 예제를 보도록 합니다.
 

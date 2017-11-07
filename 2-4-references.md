@@ -1,4 +1,4 @@
-# 4. 참고
+# 2.4. 참고
 
 아래 참조 링크를 통해 Design System 과 React-shetchapp 에 대해 좀더 깊이 있게 살펴볼 수 있습니다.
 

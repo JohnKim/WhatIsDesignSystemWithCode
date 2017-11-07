@@ -1,4 +1,4 @@
-# 3. Hacker News 어플리케이션 개발 사례
+# 2.3. Hacker News 어플리케이션 개발 사례
 
 실제 react-sketchapp 사용의 이해를 돕기 위하여 Hacker News 모바일 어플리케이션 개발을 위한 디자인 프로젝트를 개발해 보았습니다.
 
@@ -8,7 +8,7 @@ Hacker News 모바일 어플리케이션은 Hacker News API 서버(https://githu
  * Hacker News Mobile Application : https://github.com/NewsPlatform/HackerNews-design
 
 
-### 3.1. Hacker News Design
+### 2.3.1. Hacker News Design
 
 이 프로젝트 (https://github.com/NewsPlatform/HackerNews-design) 는 `react-sketchapp` 으로 디자인 가이드와 화면을 디자인 한 프로젝트 입니다. 
 
@@ -88,7 +88,7 @@ $ npm start
 이러한 폴더 구조는 실제 모바일앱 어플리케이션 프로젝트와 동일합니다. 
 
 
-### 3.2. Hacker News Mobile 어플리케이션
+### 2.3.2. Hacker News Mobile 어플리케이션
 
 이 프로젝트(https://github.com/NewsPlatform/HackerNews-mobile) 는  React Native(https://facebook.github.io/react-native/) 를 기반으로한 모바일 어플리케이션입니다. 물론 앞서 설명한 디자인의 스타일 요소는 그대로 사용하여 동작하도록 되어 있습니다. 
 
@@ -104,7 +104,7 @@ $ npm start
 화면의 스타일을 정의한 파일은 `styles/index.js` 입니다. 여기에 정의된 스타일은 react-sketchapp 기반의 Design System 에서 작성된 파일과 동일합니다. 
 
 
-# 3.3. 마지막으로
+# 2.3.3. 마지막으로
 
 Design System 를 구성할 수 있는 수 많은 방법 중 하나로`react-sketchapp` 을 소개한 것이므로 당연히 더 좋은 방법이 있을 수 있고, 지금도 수많은 시도가 진행되고 있습니다. 
 
